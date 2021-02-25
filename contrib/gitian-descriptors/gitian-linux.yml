@@ -1,5 +1,5 @@
 ---
-name: "litecoin-linux-0.18"
+name: "omnilite-linux-0.18"
 enable_cache: true
 suites:
 - "bionic"
@@ -32,8 +32,8 @@ packages:
 - "ca-certificates"
 - "python"
 remotes:
-- "url": "https://github.com/litecoin-project/litecoin.git"
-  "dir": "litecoin"
+- "url": "https://github.com/litecoin-foundation/omnilite.git"
+  "dir": "omnilite"
 files: []
 script: |
   set -e -o pipefail
@@ -122,7 +122,7 @@ script: |
   chmod +x ${WRAP_DIR}/${prog}
   done
 
-  cd litecoin
+  cd omnilite
   BASEPREFIX=`pwd`/depends
   # Build dependencies for each host
   for i in $HOSTS; do

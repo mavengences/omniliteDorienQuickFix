@@ -1,5 +1,5 @@
 ---
-name: "litecoin-osx-0.18"
+name: "omnilite-osx-0.18"
 enable_cache: true
 suites:
 - "bionic"
@@ -28,8 +28,8 @@ packages:
 - "python-setuptools"
 - "fonts-tuffy"
 remotes:
-- "url": "https://github.com/litecoin-project/litecoin.git"
-  "dir": "litecoin"
+- "url": "https://github.com/litecoin-foundation/omnilite.git"
+  "dir": "omnilite"
 files:
 - "MacOSX10.11.sdk.tar.gz"
 script: |
@@ -86,7 +86,7 @@ script: |
   create_per-host_faketime_wrappers "2000-01-01 12:00:00"
   export PATH=${WRAP_DIR}:${PATH}
 
-  cd litecoin
+  cd omnilite
   BASEPREFIX=`pwd`/depends
 
   mkdir -p ${BASEPREFIX}/SDKs
