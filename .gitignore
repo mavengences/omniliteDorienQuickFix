@@ -9,6 +9,14 @@ src/litecoin-wallet
 src/test/test_litecoin
 src/test/test_litecoin_fuzzy
 src/qt/test/test_litecoin-qt
+src/omnilite
+src/omnilited
+src/omnilite-cli
+src/omnilite-tx
+src/omnilite-wallet
+src/test/test_omnilite
+src/test/test_omnilite_fuzzy
+src/qt/test/test_omnilite-qt
 
 # autoreconf
 Makefile.in
@@ -38,6 +46,9 @@ share/setup.nsi
 share/qt/Info.plist
 
 src/univalue/gen
+
+# Omni Core Windows installer script
+src/omnicore/res/omnicore-setup-win.nsi
 
 src/qt/*.moc
 src/qt/moc_*.cpp
@@ -85,11 +96,14 @@ src/qt/bitcoin-qt.includes
 Makefile
 litecoin-qt
 litecoin-Qt.app
+omnilite-qt
+OmniLite-Qt.app
 background.tiff*
 
 # Unit-tests
 Makefile.test
 litecoin-qt_test
+omnilite-qt_test
 
 # Resources cpp
 qrc_*.cpp
@@ -111,6 +125,7 @@ linux-build
 win32-build
 test/config.ini
 test/cache/*
+test/tmp
 
 !src/leveldb*/Makefile
 
