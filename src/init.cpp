@@ -1492,7 +1492,7 @@ bool AppInitMain(InitInterfaces& interfaces)
     nTotalCache = std::max(nTotalCache, nMinDbCache << 20); // total cache cannot be less than nMinDbCache
     nTotalCache = std::min(nTotalCache, nMaxDbCache << 20); // total cache cannot be greater than nMaxDbcache
     int64_t nBlockTreeDBCache = std::min(nTotalCache / 8, nMaxBlockDBCache << 20);
-    if (gArgs.GetBoolArg("-experimental-btc-balances", DEFAULT_ADDRINDEX)) {
+    if (gArgs.GetBoolArg("-experimental-ltc-balances", DEFAULT_ADDRINDEX)) {
         // enable 3/4 of the cache if addressindex is enabled
         nBlockTreeDBCache = nTotalCache * 3 / 4;
     }
