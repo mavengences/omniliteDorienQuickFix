@@ -187,12 +187,26 @@ BASE_SCRIPTS = [
     'rpc_deriveaddresses.py --usecli',
     'rpc_scantxoutset.py',
     'feature_logging.py',
-    'p2p_node_network_limited.py',
+    # 'p2p_node_network_limited.py', # incompatible with Omni
     'feature_blocksdir.py',
     'feature_config_args.py',
     'rpc_help.py',
     'feature_help.py',
     'feature_shutdown.py',
+    'omni_reorg.py',
+    'omni_clientexpiry.py',
+    'omni_stov1.py',
+    'omni_freeze.py',
+    'omni_graceperiod.py',
+    'omni_createtoken.py',
+    'omni_freedexspec.py',
+    'omni_dexversionsspec.py',
+    'omni_basicspec.py',
+    'omni_reorgspec.py',
+    'omni_sendallspec.py',
+    'omni_crowdsalespec.py',
+    'omni_smartandmanagedspec.py',
+    'omni_stospec.py',
     # Don't append tests at the end to avoid merge conflicts
     # Put them in a random line within the section that fits their approximate run-time
 ]
@@ -328,8 +342,8 @@ def run_tests(*, test_list, src_dir, build_dir, tmpdir, jobs=1, enable_coverage=
 
     # Warn if bitcoind is already running (unix only)
     try:
-        if subprocess.check_output(["pidof", "litecoind"]) is not None:
-            print("%sWARNING!%s There is already a litecoind process running on this system. Tests may fail unexpectedly due to resource contention!" % (BOLD[1], BOLD[0]))
+        if subprocess.check_output(["pidof", "omnilited"]) is not None:
+            print("%sWARNING!%s There is already a omnilited process running on this system. Tests may fail unexpectedly due to resource contention!" % (BOLD[1], BOLD[0]))
     except (OSError, subprocess.SubprocessError):
         pass
 
@@ -555,7 +569,7 @@ class TestResult():
 def check_script_prefixes():
     """Check that test scripts start with one of the allowed name prefixes."""
 
-    good_prefixes_re = re.compile("(example|feature|interface|mempool|mining|p2p|rpc|wallet|tool)_")
+    good_prefixes_re = re.compile("(example|feature|interface|mempool|mining|omni|p2p|rpc|wallet|tool)_")
     bad_script_names = [script for script in ALL_SCRIPTS if good_prefixes_re.match(script) is None]
 
     if bad_script_names:
