@@ -34,7 +34,7 @@ class HelpRpcTest(BitcoinTestFramework):
         titles = [line[3:-3] for line in node.help().splitlines() if line.startswith('==')]
 
         components = ['Blockchain', 'Control', 'Generating', 'Mining', 'Network', 'Omni layer (configuration)', 'Omni layer (data retrieval)', 'Omni layer (payload creation)', 'Omni layer (raw transactions)', 'Omni layer (transaction creation)', 'Rawtransactions', 'Util']
-        
+
         if self.is_wallet_compiled():
             components.append('Wallet')
 
