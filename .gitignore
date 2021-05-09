@@ -100,6 +100,12 @@ omnilite-qt
 OmniLite-Qt.app
 background.tiff*
 
+# Qt Creator
+Makefile.am.user
+
+# CLion
+.idea/
+
 # Unit-tests
 Makefile.test
 litecoin-qt_test

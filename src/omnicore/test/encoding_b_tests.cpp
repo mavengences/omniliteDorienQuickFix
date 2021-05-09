@@ -31,7 +31,7 @@ BOOST_AUTO_TEST_CASE(class_b_empty)
     const CScript& scriptPubKey = vTxOuts[0].first;
     CTxDestination dest;
     BOOST_CHECK(ExtractDestination(scriptPubKey, dest));
-    BOOST_CHECK_EQUAL(EncodeDestination(dest), "6eXoDUSUV7yrAxKVNPEeKAHMY8San5Z37V");
+    BOOST_CHECK_EQUAL(EncodeDestination(dest), "LTceXoduS2cetpWJSe47M25i5oKjEccN1h");
 }
 
 BOOST_AUTO_TEST_CASE(class_b_maidsafe)

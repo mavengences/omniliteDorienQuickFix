@@ -16,7 +16,7 @@ BOOST_FIXTURE_TEST_SUITE(omnicore_exodus_tests, BasicTestingSetup)
 
 BOOST_AUTO_TEST_CASE(exodus_address_mainnet)
 {
-    BOOST_CHECK(CTxDestination(DecodeDestination("6eXoDUSUV7yrAxKVNPEeKAHMY8San5Z37V")) ==
+    BOOST_CHECK(CTxDestination(DecodeDestination("LTceXoduS2cetpWJSe47M25i5oKjEccN1h")) ==
                 ExodusAddress());
     BOOST_CHECK(!(CTxDestination(DecodeDestination("1rDQWR9yZLJY7ciyghAaF7XKD9tGzQuP6")) ==
                 ExodusAddress()));
