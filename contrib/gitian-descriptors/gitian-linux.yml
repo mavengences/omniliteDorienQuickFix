@@ -33,7 +33,7 @@ packages:
 - "python"
 remotes:
 - "url": "https://github.com/litecoin-foundation/omnilite.git"
-  "dir": "OmniLite"
+  "dir": "omnilite"
 files: []
 script: |
   set -e -o pipefail
@@ -122,7 +122,7 @@ script: |
   chmod +x ${WRAP_DIR}/${prog}
   done
 
-  cd OmniLite
+  cd omnilite
   BASEPREFIX=`pwd`/depends
   # Build dependencies for each host
   for i in $HOSTS; do
