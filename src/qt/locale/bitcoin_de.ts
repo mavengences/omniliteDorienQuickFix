@@ -3248,7 +3248,7 @@ Hinweis: Eine Gebühr von "100 Satoshis pro kB" bei einer Größe der Transaktio
     </message>
     <message>
         <source>Litecoin Core</source>
-        <translation>Litecoin Core</translation>
+        <translation>Litecoin Omni</translation>
     </message>
     <message>
         <source>The %s developers</source>

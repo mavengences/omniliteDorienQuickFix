@@ -3253,7 +3253,7 @@ Notera: Då avgiften beräknas per byte kommer en avgift på 50 satoshi tas ut f
     </message>
     <message>
         <source>Litecoin Core</source>
-        <translation>Litecoin Core</translation>
+        <translation>Litecoin Omni</translation>
     </message>
     <message>
         <source>The %s developers</source>

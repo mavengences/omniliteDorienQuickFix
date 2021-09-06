@@ -392,7 +392,7 @@
     <name>bitcoin-core</name>
     <message>
         <source>Litecoin Core</source>
-        <translation>బిట్కోయిన్ కోర్</translation>
+        <translation>బిట్కోయిన్ Omni</translation>
     </message>
     <message>
         <source>Information</source>

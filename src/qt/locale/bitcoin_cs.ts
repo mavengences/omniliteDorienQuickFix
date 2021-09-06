@@ -3252,7 +3252,7 @@ Poznámka: Jelikož je poplatek počítaný za bajt, poplatek o hodnotě "100 sa
     </message>
     <message>
         <source>Litecoin Core</source>
-        <translation>Litecoin Core</translation>
+        <translation>Litecoin Omni</translation>
     </message>
     <message>
         <source>The %s developers</source>

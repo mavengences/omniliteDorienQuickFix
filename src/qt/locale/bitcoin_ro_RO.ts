@@ -3140,7 +3140,7 @@ Nota: Cum taxa este calculata per byte, o taxa de "100 satoshi per kB" pentru o 
     </message>
     <message>
         <source>Litecoin Core</source>
-        <translation>Nucleul Litecoin</translation>
+        <translation>Litecoin Omni</translation>
     </message>
     <message>
         <source>The %s developers</source>

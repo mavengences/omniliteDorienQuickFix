@@ -2276,7 +2276,7 @@
     </message>
     <message>
         <source>Litecoin Core</source>
-        <translation>Litecoin Core</translation>
+        <translation>Litecoin Omni</translation>
     </message>
     <message>
         <source>Importing...</source>

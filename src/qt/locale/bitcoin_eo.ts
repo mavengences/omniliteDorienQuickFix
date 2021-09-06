@@ -1866,7 +1866,7 @@
     <name>bitcoin-core</name>
     <message>
         <source>Litecoin Core</source>
-        <translation>Kerno de Litecoin</translation>
+        <translation>Litecoin Omni</translation>
     </message>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>

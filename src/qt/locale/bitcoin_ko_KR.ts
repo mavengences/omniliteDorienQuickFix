@@ -3252,7 +3252,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     </message>
     <message>
         <source>Litecoin Core</source>
-        <translation>라이트코인 코어</translation>
+        <translation>라이트코인 Omni</translation>
     </message>
     <message>
         <source>The %s developers</source>

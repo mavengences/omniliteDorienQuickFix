@@ -788,7 +788,7 @@
     <name>bitcoin-core</name>
     <message>
         <source>Litecoin Core</source>
-        <translation>Berthama Litecoin</translation>
+        <translation>Litecoin Omni</translation>
     </message>
     <message>
         <source>Information</source>

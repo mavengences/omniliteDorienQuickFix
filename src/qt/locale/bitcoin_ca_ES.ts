@@ -2710,7 +2710,7 @@
     </message>
     <message>
         <source>Litecoin Core</source>
-        <translation>Litecoin Core</translation>
+        <translation>Litecoin Omni</translation>
     </message>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>

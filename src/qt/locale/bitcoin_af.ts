@@ -2040,7 +2040,7 @@ word die fooi eweredig verdeel.</translation>
     <name>bitcoin-core</name>
     <message>
         <source>Litecoin Core</source>
-        <translation>Litecoin Kern</translation>
+        <translation>Litecoin Omni</translation>
     </message>
     <message>
         <source>Error loading %s</source>

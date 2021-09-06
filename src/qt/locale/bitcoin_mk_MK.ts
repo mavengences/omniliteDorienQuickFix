@@ -578,7 +578,7 @@
     <name>bitcoin-core</name>
     <message>
         <source>Litecoin Core</source>
-        <translation>Биткоин Core</translation>
+        <translation>Биткоин Omni</translation>
     </message>
     <message>
         <source>Warning</source>

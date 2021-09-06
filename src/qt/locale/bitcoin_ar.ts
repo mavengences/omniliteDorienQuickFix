@@ -2956,7 +2956,7 @@
     </message>
     <message>
         <source>Litecoin Core</source>
-        <translation>جوهر Litecoin</translation>
+        <translation>Litecoin Omni</translation>
     </message>
     <message>
         <source>Cannot obtain a lock on data directory %s. %s is probably already running.</source>

@@ -280,7 +280,7 @@
     <name>bitcoin-core</name>
     <message>
         <source>Litecoin Core</source>
-        <translation>Litecoin Jezrga</translation>
+        <translation>Litecoin Omni</translation>
     </message>
     </context>
 </TS>

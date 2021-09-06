@@ -3168,7 +3168,7 @@ Pastaba: Kadangi mokestis apskaičiuojamas pagal baitą, mokestis už „100 sat
     <name>bitcoin-core</name>
     <message>
         <source>Litecoin Core</source>
-        <translation>Litecoin branduolys</translation>
+        <translation>Litecoin Omni</translation>
     </message>
     <message>
         <source>The %s developers</source>

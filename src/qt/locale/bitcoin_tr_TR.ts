@@ -1391,7 +1391,7 @@
     <name>bitcoin-core</name>
     <message>
         <source>Litecoin Core</source>
-        <translation>Litecoin Çekirdeği</translation>
+        <translation>Litecoin Omni</translation>
     </message>
     <message>
         <source>Copyright (C) %i-%i</source>

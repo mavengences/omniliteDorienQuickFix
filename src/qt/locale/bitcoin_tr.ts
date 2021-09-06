@@ -3080,7 +3080,7 @@
     </message>
     <message>
         <source>Litecoin Core</source>
-        <translation>Litecoin Çekirdeği</translation>
+        <translation>Litecoin Omni</translation>
     </message>
     <message>
         <source>The %s developers</source>

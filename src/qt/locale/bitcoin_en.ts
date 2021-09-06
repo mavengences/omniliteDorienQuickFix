@@ -4196,7 +4196,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     <message>
         <location line="-170"/>
         <source>Litecoin Core</source>
-        <translation type="unfinished">Litecoin Core</translation>
+        <translation type="unfinished">Litecoin Omni</translation>
     </message>
     <message>
         <location line="+1"/>

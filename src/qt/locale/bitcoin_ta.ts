@@ -2132,7 +2132,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     <name>bitcoin-core</name>
     <message>
         <source>Litecoin Core</source>
-        <translation>Litecoin மையம்</translation>
+        <translation>Litecoin Omni</translation>
     </message>
     <message>
         <source>Information</source>

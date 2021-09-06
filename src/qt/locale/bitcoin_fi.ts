@@ -3136,7 +3136,7 @@
     </message>
     <message>
         <source>Litecoin Core</source>
-        <translation>Litecoin-ydin</translation>
+        <translation>Litecoin Omni</translation>
     </message>
     <message>
         <source>The %s developers</source>

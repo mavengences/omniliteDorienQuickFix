@@ -736,7 +736,7 @@
     <name>bitcoin-core</name>
     <message>
         <source>Litecoin Core</source>
-        <translation>Kapilubluban ning Litecoin</translation>
+        <translation>Litecoin Omni</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>
