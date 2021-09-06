@@ -23,7 +23,7 @@ packages:
 - "python"
 - "rename"
 remotes:
-- "url": "https://github.com/litecoin-foundation/omnilite.git"
+- "url": "https://github.com/omnilite/omnilite.git"
   "dir": "omnilite"
 files: []
 script: |

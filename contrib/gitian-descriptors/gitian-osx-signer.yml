@@ -7,10 +7,10 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/litecoin-project/litecoin-detached-sigs.git"
+- "url": "https://github.com/omnilite/omnilite-detached-sigs.git"
   "dir": "signature"
 files:
-- "OmniLite-osx-unsigned.tar.gz"
+- "omnilite-osx-unsigned.tar.gz"
 script: |
   set -e -o pipefail
 
@@ -29,8 +29,8 @@ script: |
     chmod +x ${WRAP_DIR}/${prog}
   done
 
-  UNSIGNED=OmniLite-osx-unsigned.tar.gz
-  SIGNED=OmniLite-osx-signed.dmg
+  UNSIGNED=omnilite-osx-unsigned.tar.gz
+  SIGNED=omnilite-osx-signed.dmg
 
   tar -xf ${UNSIGNED}
   OSX_VOLNAME="$(cat osx_volname)"

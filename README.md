@@ -1,7 +1,7 @@
 OmniLite
 =========================================
 
-[![Build Status](https://travis-ci.com/litecoin-foundation/OmniLite.svg?branch=0.9.0)](https://travis-ci.org/litecoin-foundation/omnilite)
+[![Build Status](https://travis-ci.com/omnilite/OmniLite.svg?branch=0.9.0)](https://travis-ci.org/omnilite/omnilite)
 
 What is the Omni Layer
 ----------------------
@@ -49,7 +49,7 @@ Current feature set:
 Support:
 --------
 
-* [GitHub](https://github.com/litecoin-foundation/omnilite/issues)
+* [GitHub](https://github.com/omnilite/omnilite/issues)
 * [Email](mailto:contact@litecoinfoundation.net)
 
 Disclaimer, warning
