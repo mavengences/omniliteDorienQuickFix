@@ -1008,7 +1008,7 @@ int CMPTransaction::logicMath_SimpleSend(uint256& blockHash)
 
     if (isPropertyNonFungible(property)) {
         PrintToLog("%s(): rejected: property %d is of type non-fungible\n", __func__, property);
-        return (PKT_ERROR_TOKENS -27);
+        return (PKT_ERROR_NFT -21);
     }
 
     if (nValue <= 0 || MAX_INT_8_BYTES < nValue) {
@@ -1059,7 +1059,7 @@ int CMPTransaction::logicMath_SendToOwners()
 
     if (isPropertyNonFungible(property)) {
         PrintToLog("%s(): rejected: property %d is of type non-fungible\n", __func__, property);
-        return (PKT_ERROR_TOKENS -27);
+        return (PKT_ERROR_NFT -21);
     }
 
     if (nValue <= 0 || MAX_INT_8_BYTES < nValue) {
@@ -1182,7 +1182,7 @@ int CMPTransaction::logicMath_SendAll()
 
     if (isPropertyNonFungible(property)) {
         PrintToLog("%s(): rejected: property %d is of type non-fungible\n", __func__, property);
-        return (PKT_ERROR_TOKENS -27);
+        return (PKT_ERROR_NFT -21);
     }
 
     // ------------------------------------------
@@ -1240,38 +1240,38 @@ int CMPTransaction::logicMath_SendNonFungible()
                 version,
                 property,
                 block);
-        return (PKT_ERROR_SEND -22);
+        return (PKT_ERROR_NFT -23);
     }
 
     if (!isPropertyNonFungible(property)) {
         PrintToLog("%s(): rejected: property %d is not of type non-fungible\n", __func__, property);
-        return (PKT_ERROR_TOKENS -27);
+        return (PKT_ERROR_NFT -24);
     }
 
     if (nonfungible_token_start <= 0 || MAX_INT_8_BYTES < nonfungible_token_start) {
         PrintToLog("%s(): rejected: non-fungible token range start value out of range or zero: %d", __func__, nonfungible_token_start);
-        return (PKT_ERROR_SEND -23);
+        return (PKT_ERROR_NFT -25);
     }
 
     if (nonfungible_token_end <= 0 || MAX_INT_8_BYTES < nonfungible_token_end) {
         PrintToLog("%s(): rejected: non-fungible token range end value out of range or zero: %d", __func__, nonfungible_token_end);
-        return (PKT_ERROR_SEND -23);
+        return (PKT_ERROR_NFT -26);
     }
 
     if (nonfungible_token_start > nonfungible_token_end) {
         PrintToLog("%s(): rejected: non-fungible token range start value: %d is less than or equal to range end value: %d", __func__, nonfungible_token_start, nonfungible_token_end);
-        return (PKT_ERROR_SEND -23);
+        return (PKT_ERROR_NFT -27);
     }
 
     int64_t amount = (nonfungible_token_end - nonfungible_token_start) + 1;
     if (amount <= 0) {
         PrintToLog("%s(): rejected: non-fungible token range amount out of range or zero: %d", __func__, amount);
-        return (PKT_ERROR_SEND -23);
+        return (PKT_ERROR_NFT -28);
     }
 
     if (!pDbSpInfo->hasSP(property)) {
         PrintToLog("%s(): rejected: property %d does not exist\n", __func__, property);
-        return (PKT_ERROR_SEND -24);
+        return (PKT_ERROR_NFT -29);
     }
 
     int64_t nBalance = GetAvailableTokenBalance(sender, property);
@@ -1282,7 +1282,7 @@ int CMPTransaction::logicMath_SendNonFungible()
                 property,
                 FormatMP(property, nBalance),
                 FormatMP(property, amount));
-        return (PKT_ERROR_SEND -25);
+        return (PKT_ERROR_NFT -32);
     }
 
     std::string rangeStartOwner = pDbNFT->GetNonFungibleTokenOwner(property, nonfungible_token_start);
@@ -1292,7 +1292,7 @@ int CMPTransaction::logicMath_SendNonFungible()
         PrintToLog("%s(): rejected: sender %s does not own the range being sent\n",
                 __func__,
                 sender);
-        return (PKT_ERROR_SEND -26);
+        return (PKT_ERROR_NFT -33);
     }
 
     // ------------------------------------------
@@ -1326,7 +1326,7 @@ int CMPTransaction::logicMath_TradeOffer()
 
     if (isPropertyNonFungible(property)) {
         PrintToLog("%s(): rejected: property %d is of type non-fungible\n", __func__, property);
-        return (PKT_ERROR_TOKENS -27);
+        return (PKT_ERROR_NFT -21);
     }
 
     if (MAX_INT_8_BYTES < nValue) {
@@ -1430,7 +1430,7 @@ int CMPTransaction::logicMath_AcceptOffer_BTC()
 
     if (isPropertyNonFungible(property)) {
         PrintToLog("%s(): rejected: property %d is of type non-fungible\n", __func__, property);
-        return (PKT_ERROR_TOKENS -27);
+        return (PKT_ERROR_NFT -21);
     }
 
     if (nValue <= 0 || MAX_INT_8_BYTES < nValue) {
@@ -1625,7 +1625,7 @@ int CMPTransaction::logicMath_CloseCrowdsale(CBlockIndex* pindex)
 
     if (isPropertyNonFungible(property)) {
         PrintToLog("%s(): rejected: property %d is of type non-fungible\n", __func__, property);
-        return (PKT_ERROR_TOKENS -27);
+        return (PKT_ERROR_NFT -21);
     }
 
     if (!IsPropertyIdValid(property)) {
@@ -1701,7 +1701,7 @@ int CMPTransaction::logicMath_CreatePropertyManaged(CBlockIndex* pindex)
 
     if (MSC_PROPERTY_TYPE_NONFUNGIBLE == prop_type && !IsFeatureActivated(FEATURE_NONFUNGIBLE, block)) {
         PrintToLog("%s(): rejected: non-fungible tokens are not yet activated (property type: %d)\n", __func__, prop_type);
-        return (PKT_ERROR_SP -22);
+        return (PKT_ERROR_NFT -20);
     }
 
     if ('\0' == name[0]) {
@@ -1842,7 +1842,7 @@ int CMPTransaction::logicMath_RevokeTokens(CBlockIndex* pindex)
 
     if (isPropertyNonFungible(property)) {
         PrintToLog("%s(): rejected: property %d is of type non-fungible\n", __func__, property);
-        return (PKT_ERROR_TOKENS -27);
+        return (PKT_ERROR_NFT -21);
     }
 
     if (nValue <= 0 || MAX_INT_8_BYTES < nValue) {
@@ -1909,7 +1909,7 @@ int CMPTransaction::logicMath_ChangeIssuer(CBlockIndex* pindex)
 
     if (isPropertyNonFungible(property)) {
         PrintToLog("%s(): rejected: property %d is of type non-fungible\n", __func__, property);
-        return (PKT_ERROR_TOKENS -27);
+        return (PKT_ERROR_NFT -21);
     }
 
     if (!IsPropertyIdValid(property)) {
@@ -2180,38 +2180,38 @@ int CMPTransaction::logicMath_NonFungibleData()
                 version,
                 property,
                 block);
-        return (PKT_ERROR_SEND -22);
+        return (PKT_ERROR_NFT -23);
     }
 
     if (!isPropertyNonFungible(property)) {
         PrintToLog("%s(): rejected: property %d is not of type non-fungible\n", __func__, property);
-        return (PKT_ERROR_TOKENS -27);
+        return (PKT_ERROR_NFT -24);
     }
 
     if (nonfungible_token_start <= 0 || MAX_INT_8_BYTES < nonfungible_token_start) {
         PrintToLog("%s(): rejected: non-fungible token range start value out of range or zero: %d", __func__, nonfungible_token_start);
-        return (PKT_ERROR_SEND -23);
+        return (PKT_ERROR_NFT -25);
     }
 
     if (nonfungible_token_end <= 0 || MAX_INT_8_BYTES < nonfungible_token_end) {
         PrintToLog("%s(): rejected: non-fungible token range end value out of range or zero: %d", __func__, nonfungible_token_end);
-        return (PKT_ERROR_SEND -23);
+        return (PKT_ERROR_NFT -26);
     }
 
     if (nonfungible_token_start > nonfungible_token_end) {
         PrintToLog("%s(): rejected: non-fungible token range start value: %d is less than or equal to range end value: %d", __func__, nonfungible_token_start, nonfungible_token_end);
-        return (PKT_ERROR_SEND -23);
+        return (PKT_ERROR_NFT -27);
     }
 
     int64_t amount = (nonfungible_token_end - nonfungible_token_start) + 1;
     if (amount <= 0) {
         PrintToLog("%s(): rejected: non-fungible token range amount out of range or zero: %d", __func__, amount);
-        return (PKT_ERROR_SEND -23);
+        return (PKT_ERROR_NFT -28);
     }
 
     if (!pDbSpInfo->hasSP(property)) {
         PrintToLog("%s(): rejected: property %d does not exist\n", __func__, property);
-        return (PKT_ERROR_SEND -24);
+        return (PKT_ERROR_NFT -29);
     }
 
     NonFungibleStorage type = nonfungible_data_type ? NonFungibleStorage::IssuerData : NonFungibleStorage::HolderData;
@@ -2225,7 +2225,7 @@ int CMPTransaction::logicMath_NonFungibleData()
             PrintToLog("%s(): rejected: sender %s does not own the range data is being set on\n",
                     __func__,
                     sender);
-            return (PKT_ERROR_SEND -26);
+            return (PKT_ERROR_NFT -30);
         }
     }
     else
@@ -2239,7 +2239,7 @@ int CMPTransaction::logicMath_NonFungibleData()
                     property);
 
             if (IsFeatureActivated(FEATURE_NONFUNGIBLE_ISSUER, block)) {
-                return (PKT_ERROR_SP -22);
+                return (PKT_ERROR_NFT -31);
             }
         }
     }
