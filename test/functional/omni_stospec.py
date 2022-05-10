@@ -33,7 +33,7 @@ class OmniSTOSpec(BitcoinTestFramework):
         self.nodes[0].generatetoaddress(1, coinbase_address)
 
         stoFeePerAddress = "0.00000001"
-        FEATHER = 3
+        LITECOIN = 3
 
         NUM_OWNERS = "30" # Was 70 in OmniJ tests but very slow in python!
         params = [{"maxN": NUM_OWNERS, "amountStartPerOwner": "1", "amountDistributePerOwner": "1", "propertyType": 1},
@@ -73,7 +73,7 @@ class OmniSTOSpec(BitcoinTestFramework):
 
             # Create actor
             actorAddress = self.nodes[0].getnewaddress()
-            txid = self.nodes[0].omni_send("mgimY5b4MTXRdc9LgQk9KYQtB37W4UmKwT", actorAddress, FEATHER, "{:.8f}".format(actorMSC))
+            txid = self.nodes[0].omni_send("mgimY5b4MTXRdc9LgQk9KYQtB37W4UmKwT", actorAddress, LITECOIN, "{:.8f}".format(actorMSC))
             self.nodes[0].sendtoaddress(actorAddress, "1")
             self.nodes[0].generatetoaddress(1, coinbase_address)
 
@@ -93,7 +93,7 @@ class OmniSTOSpec(BitcoinTestFramework):
             currencySPT = result['propertyid']
 
             # Check funding balances of actor
-            startingBalanceMSC = self.nodes[0].omni_getbalance(actorAddress, FEATHER)
+            startingBalanceMSC = self.nodes[0].omni_getbalance(actorAddress, LITECOIN)
             startingBalanceSPT = self.nodes[0].omni_getbalance(actorAddress, currencySPT)
             assert_equal(Decimal(startingBalanceMSC['balance']), actorMSC)
             assert_equal(Decimal(startingBalanceSPT['balance']), fundingSPT)
@@ -114,7 +114,7 @@ class OmniSTOSpec(BitcoinTestFramework):
             self.nodes[0].generatetoaddress(1, coinbase_address)
 
             # Check starting balances of actor
-            reallyBalanceMSC = self.nodes[0].omni_getbalance(actorAddress, FEATHER)
+            reallyBalanceMSC = self.nodes[0].omni_getbalance(actorAddress, LITECOIN)
             reallyBalanceSPT = self.nodes[0].omni_getbalance(actorAddress, currencySPT)
             assert_equal(Decimal(reallyBalanceMSC['balance']), actorMSC)
             assert_equal(Decimal(reallyBalanceSPT['balance']), Decimal(actorSPT))

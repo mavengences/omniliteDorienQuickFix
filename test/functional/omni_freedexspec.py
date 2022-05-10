@@ -100,7 +100,7 @@ class OmniFreeDExSpec(BitcoinTestFramework):
         assert_equal(offerTx['propertyid'], currencyOffered)
         assert_equal(offerTx['divisible'], True)
         assert_equal(offerTx['amount'], amountOffered)
-        assert_equal(offerTx['feathercoindesired'], desiredBTC)
+        assert_equal(offerTx['litecoindesired'], desiredBTC)
         assert_equal(offerTx['timelimit'], stdBlockSpan)
         assert_equal(offerTx['feerequired'], stdCommitFee)
         assert_equal(offerTx['action'], "new")
@@ -111,7 +111,7 @@ class OmniFreeDExSpec(BitcoinTestFramework):
         assert_equal(len(self.nodes[0].omni_getactivedexsells()), len(activeOffersAtTheStart) + 1)
 
         # Offering more tokens than available.
-        # This will fail in OmniFeather due to FEATURE_DEXMATH being hard coded, the same is not true for Omnicore itself.
+        # This will fail in OmniLite due to FEATURE_DEXMATH being hard coded, the same is not true for Omnicore itself.
 
         # Created new funded address for test
         fundedAddress = self.nodes[0].getnewaddress()

@@ -28,7 +28,7 @@ class OmniSendToOwnersV1(BitcoinTestFramework):
         self.nodes[0].sendtoaddress("mgimY5b4MTXRdc9LgQk9KYQtB37W4UmKwT", 10)
         self.nodes[0].generatetoaddress(1, coinbase_address)
 
-        # Funding the address with some FEATHER for fees
+        # Funding the address with some LITECOIN for fees
         txid = self.nodes[0].omni_send("mgimY5b4MTXRdc9LgQk9KYQtB37W4UmKwT", address, 3, "0.2")
         self.nodes[0].generatetoaddress(1, coinbase_address)
 

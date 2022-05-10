@@ -32,7 +32,7 @@ Current feature set:
 
 * Retrieving active and expired crowdsale information [doc](src/omnicore/doc/rpc-api.md#omni_getcrowdsale)
 
-* Sending a specific FTC amount to a receiver with referenceamount in `omni_send`
+* Sending a specific LTC amount to a receiver with referenceamount in `omni_send`
 
 * Creating and broadcasting transactions based on raw Omni Layer transactions with `omni_sendrawtx`
 
