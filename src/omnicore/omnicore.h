@@ -31,14 +31,14 @@ int const MAX_STATE_HISTORY = 200;
 // Also store the state every 5000 blocks to be able to recover
 // from a crash or shutdown during reparse more quickly
 int const STORE_EVERY_N_BLOCK = 5000;
-// Don't store the state every block on mainnet until block 622000
+// Don't store the state every block on mainnet until block 2000000
 // was reached
-int const DONT_STORE_MAINNET_STATE_UNTIL = 622000;
+int const DONT_STORE_MAINNET_STATE_UNTIL = 2000000;
 
 #define TEST_ECO_PROPERTY_1 (0x80000003UL)
 
 // increment this value to force a refresh of the state (similar to --startclean)
-#define DB_VERSION 8
+#define DB_VERSION 9
 
 // could probably also use: int64_t maxInt64 = std::numeric_limits<int64_t>::max();
 // maximum numeric values from the spec:
