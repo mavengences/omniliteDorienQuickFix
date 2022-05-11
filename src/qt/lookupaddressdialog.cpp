@@ -151,14 +151,15 @@ void LookupAddressDialog::searchAddress()
     // first let's check if we have a searchText, if not do nothing
     if (searchText.empty()) return;
 
-    // lets see if the string is a valid bitcoin address
+    // lets see if the string is a valid litecoin address
     CTxDestination address = DecodeDestination(searchText); // no null check on searchText required we've already checked it's not empty above
     if (IsValidDestination(address)) //do what?
     {
         // update top fields
         ui->addressLabel->setText(QString::fromStdString(searchText));
-        if ((searchText.substr(0,1) == "1") || (searchText.substr(0,1) == "m") || (searchText.substr(0,1) == "n")) ui->addressTypeLabel->setText("Public Key Hash");
-        if ((searchText.substr(0,1) == "2") || (searchText.substr(0,1) == "3")) ui->addressTypeLabel->setText("Pay to Script Hash");
+        if ((searchText.substr(0,1) == "L") || (searchText.substr(0,1) == "m") || (searchText.substr(0,1) == "n")) ui->addressTypeLabel->setText("Public Key Hash");
+        if ((searchText.substr(0,1) == "M") || (searchText.substr(0,1) == "Q")) ui->addressTypeLabel->setText("Pay to Script Hash");
+        if ((searchText.substr(0,3) == "ltc") || (searchText.substr(0,4) == "tltc")) ui->addressTypeLabel->setText("Native SegWit Bech32");
         if (IsMyAddress(searchText, &walletModel->wallet())) { ui->isMineLabel->setText("Yes"); } else { ui->isMineLabel->setText("No"); }
         ui->balanceLabel->setText(QString::fromStdString(FormatDivisibleMP(GetAvailableTokenBalance(searchText, 1)) + " OMNI"));
         // QR
