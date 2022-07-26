@@ -424,7 +424,7 @@ void CMPNonFungibleTokensDB::SanityCheck()
     for (std::map<uint32_t,int64_t>::iterator it = totals.begin(); it != totals.end(); ++it) {
         if (mastercore::getTotalTokens(it->first) != it->second) {
             std::string abortMsg = strprintf("Failed sanity check on property %d (%d != %d)\n", it->first, mastercore::getTotalTokens(it->first), it->second);
-            DoAbortNode(abortMsg, abortMsg);
+            // DoAbortNode(abortMsg, abortMsg);
         } else {
             result = result + strprintf("%d:%d=%d,", it->first, mastercore::getTotalTokens(it->first), it->second);
         }
